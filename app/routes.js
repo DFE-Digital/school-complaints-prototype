@@ -7,3 +7,8 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
+
+//********************************************
+//* route files for different sprints
+//********************************************
+require('./routes/discovery-v01.js')(router);

@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Complaint page" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-caption-l">URN: 135367</p>
+    <h1 class="govuk-heading-xl">Bradford Academy</h1>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Status</dt>
+        <dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--grey">Resolved</strong></dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Date complaint submitted</dt>
+        <dd class="govuk-summary-list__value">29 April 2025</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Assigned to</dt>
+        <dd class="govuk-summary-list__value">Cuthbert Dibble</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> assigned to</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Complainant</dt>
+        <dd class="govuk-summary-list__value">Blerky Johnson</dd>
+      </div>
+    </dl>
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="parent-complaint-page-timeline.html">Complaint timeline</a>
+        </li>
+        <li class="moj-sub-navigation__item moj-sub-navigation__item--active">
+          <a class="moj-sub-navigation__link" href="#">Submitted complaint</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h2 class="govuk-heading-l">Submitted complaint</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Submitted by</dt>
+        <dd class="govuk-summary-list__value">Blerky Johnson</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Submitted on</dt>
+        <dd class="govuk-summary-list__value">29 April 2025</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Email address</dt>
+        <dd class="govuk-summary-list__value"><a class="govuk-link" href="#">Blerkyblooks98@hotmail.com</a></dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Phone number</dt>
+        <dd class="govuk-summary-list__value"><a class="govuk-link" href="#">01234 567 890</a></dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Topics of complaint</dt>
+        <dd class="govuk-summary-list__value">Attendance, Communication with parents or carers, Special educational needs (SEN) provision</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Complaint details</dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">This is where there would be the full details of the complaint, written by the complainant in the free text field in the form.</p>
+          <p class="govuk-body">It should allow for paragraph breaks to make it easier to read as these will be long and in depth items of information.</p>
+          <p class="govuk-body">Like, there could be loads of pargraphs.</p>
+          <p class="govuk-body">So here's some lorem ipsum to fill out some more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et ullamcorper leo. Aliquam at massa id tortor pretium malesuada sit amet in lorem.</p>
+          <p class="govuk-body">Mauris aliquet diam non elementum maximus. Donec bibendum quis metus sit amet mattis. Nam nec sodales lectus. Suspendisse non purus ac urna pharetra vulputate. Ut tincidunt sapien libero, ut cursus justo suscipit vel.</p>
+          <p class="govuk-body">Aliquam convallis ante augue, sit amet sagittis quam ullamcorper vel. Ut imperdiet consectetur tellus a vehicula. Sed sed ligula ac eros aliquet suscipit. Integer a neque vitae dui sollicitudin finibus.</p>
+          <p class="govuk-body">Aliquam erat volutpat. Sed ut neque vitae enim accumsan porta. Vivamus congue, leo nec bibendum scelerisque, dolor metus semper leo, vitae ultrices ante sem id tortor.</p>
+          <p class="govuk-body">Sed facilisis ex ac tristique feugiat. Sed suscipit magna maximus enim pellentesque, vel rutrum erat rutrum.</p>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Evidence</dt>
+        <dd class="govuk-summary-list__value">
+          <a class="govuk-link govuk-link--no-visited-state" href="#">name-of-document.docx</a><br>
+          <a class="govuk-link govuk-link--no-visited-state" href="#">another-document-of-some-sort.pdf</a><br>
+          <a class="govuk-link govuk-link--no-visited-state" href="#">Maybe-something-else-too.xlsx</a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+{% endblock %}

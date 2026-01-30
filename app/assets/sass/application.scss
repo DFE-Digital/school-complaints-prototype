@@ -4,3 +4,106 @@
 // 
 
 // Add extra styles here
+.govuk-header__link .govuk-header__logotype{
+    height: 30px;
+}
+
+.govuk-header__link:focus .govuk-header__logotype{
+    content: url(/public/images/department-for-education_black.png);
+    height: 30px;
+}
+
+// MoJ sub-navigation component (minimal styles when MoJ Frontend not installed)
+.moj-sub-navigation {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.moj-sub-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.moj-sub-navigation__item {
+  margin-bottom: 0;
+}
+
+.moj-sub-navigation__link {
+  display: block;
+  padding: 1rem 0;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 3px solid transparent;
+  color: #1d70b8;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 3px solid #fd0;
+    outline-offset: 0;
+  }
+}
+
+.moj-sub-navigation__item--active .moj-sub-navigation__link {
+  font-weight: 700;
+  border-bottom-color: #1d70b8;
+  color: #1d70b8;
+}
+
+// HMRC timeline component (https://design.tax.service.gov.uk/hmrc-design-patterns/timeline/)
+.hmrc-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 20px;
+  border-left: 3px solid #1d70b8;
+}
+
+.hmrc-timeline__event {
+  position: relative;
+  padding-bottom: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 0.4em;
+    width: 12px;
+    height: 3px;
+    background: #1d70b8;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.hmrc-timeline__event-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hmrc-timeline__event-meta {
+  font-size: 1rem;
+  color: #505a5f;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.hmrc-timeline__event-content {
+  margin-top: 0.5rem;
+
+  .govuk-body {
+    margin-bottom: 0;
+  }
+}

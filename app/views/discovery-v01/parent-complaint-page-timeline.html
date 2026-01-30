@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Complaint page" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-caption-l">URN: 135367</p>
+    <h1 class="govuk-heading-xl">Bradford Academy</h1>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Status</dt>
+        <dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--grey">Resolved</strong></dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Date complaint submitted</dt>
+        <dd class="govuk-summary-list__value">29 April 2025</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Assigned to</dt>
+        <dd class="govuk-summary-list__value">Cuthbert Dibble</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> assigned to</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Complainant</dt>
+        <dd class="govuk-summary-list__value">Blerky Johnson</dd>
+      </div>
+    </dl>
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item moj-sub-navigation__item--active">
+          <a class="moj-sub-navigation__link" href="#">Complaint timeline</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="parent-complaint-page.html">Submitted complaint</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h2 class="govuk-heading-l">Complaint timeline</h2>
+
+    <ol class="hmrc-timeline">
+      <li class="hmrc-timeline__event">
+        <h3 class="hmrc-timeline__event-title">Outcome <strong class="govuk-tag govuk-tag--grey">Resolved</strong></h3>
+        <time class="hmrc-timeline__event-meta" datetime="2026-01-21T14:01">21 January 2026 at 2.01pm</time>
+        <div class="hmrc-timeline__event-content">
+          <p class="govuk-body">Some words here about the outcome. These are probably entered by somebody at the school on their end, and presented to the complainant here when they log in.</p>
+        </div>
+      </li>
+      <li class="hmrc-timeline__event">
+        <h3 class="hmrc-timeline__event-title">Board of governors meeting</h3>
+        <time class="hmrc-timeline__event-meta" datetime="2026-01-14T19:30">14 January 2026 at 7.30pm</time>
+        <div class="hmrc-timeline__event-content">
+          <p class="govuk-body">You could have something here that would let the complainant view or download the minutes of the meeting.</p>
+        </div>
+      </li>
+      <li class="hmrc-timeline__event">
+        <h3 class="hmrc-timeline__event-title">Formal complaint made to school</h3>
+        <time class="hmrc-timeline__event-meta" datetime="2025-04-29T11:00">29 April 2025 at 11am</time>
+      </li>
+      <li class="hmrc-timeline__event">
+        <h3 class="hmrc-timeline__event-title">Headteacher discussion</h3>
+        <time class="hmrc-timeline__event-meta" datetime="2025-04-13T15:05">13 April 2025 at 3.05pm</time>
+        <div class="hmrc-timeline__event-content">
+          <p class="govuk-body">A summary of the discussion the complainant had with the head. Perhaps as part of the process the head's notes of the conversation would be shared with the complainant to review and check they agree on what was said before it is recorded in here.</p>
+        </div>
+      </li>
+      <li class="hmrc-timeline__event">
+        <h3 class="hmrc-timeline__event-title">Informal complaint made to school</h3>
+        <time class="hmrc-timeline__event-meta" datetime="2025-04-08T10:30">8 April 2025 at 10.30am</time>
+      </li>
+      <li class="hmrc-timeline__event">
+        <h3 class="hmrc-timeline__event-title">Incident leading to complaint</h3>
+        <time class="hmrc-timeline__event-meta" datetime="2025-03-30T12:16">30 March 2025 at 12.16pm</time>
+        <div class="hmrc-timeline__event-content">
+          <p class="govuk-body">Some background context about the reason for the complaint. This would be pulled from the information entered by the complainant when they fill out the form.</p>
+        </div>
+      </li>
+    </ol>
+
+  </div>
+</div>
+
+{% endblock %}
