@@ -4,6 +4,17 @@
 // 
 
 // Add extra styles here
+.prototype-index-card {
+  background-color: #d9f0ff; 
+  padding: 20px 30px 10px 30px; 
+  margin-bottom: 30px;
+  code {
+      padding: 0 5px;
+      color: #d13118;
+      background-color: #fff;
+  }
+}
+
 .govuk-header__link .govuk-header__logotype{
     height: 30px;
 }
@@ -104,6 +115,41 @@
   margin-top: 0.5rem;
 
   .govuk-body {
+    margin-bottom: 0;
+  }
+}
+
+// MoJ filter component (https://design-patterns.service.justice.gov.uk/components/filter)
+.moj-filter {
+  background: #fff;
+  border: 1px solid #b1b4b6;
+}
+
+.moj-filter__header {
+  background: #505a5f;
+  padding: 1rem 1.25rem;
+
+  .govuk-heading-m {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+.moj-filter__content {
+  padding: 1.25rem;
+}
+
+.moj-filter__selected {
+  margin-bottom: 1.5rem;
+}
+
+.moj-filter__options {
+  .govuk-form-group {
+    margin-bottom: 0;
+  }
+
+  .govuk-button {
     margin-bottom: 0;
   }
 }

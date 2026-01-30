@@ -1,0 +1,185 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="School dashboard - Bradford Academy" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <span class="govuk-caption-xl">Bradford Academy</span>
+    <h1 class="govuk-heading-xl">Complaints made about your school</h1>
+    <p class="govuk-body">A list of formal complaints you have made about schools.</p>
+    <p class="govuk-body">This list includes active and resolved complaints.</p>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="moj-filter" data-module="moj-filter">
+      <div class="moj-filter__header">
+        <div class="moj-filter__header-title">
+          <h2 class="govuk-heading-m">Filter</h2>
+        </div>
+      </div>
+      <div class="moj-filter__content">
+        <div class="moj-filter__selected">
+          <div class="moj-filter__selected-heading">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <h3 class="govuk-heading-s">Selected filters</h3>
+              </div>
+              <div class="govuk-grid-column-one-third" style="text-align: right;">
+                <a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
+              </div>
+            </div>
+          </div>
+          <p class="govuk-body govuk-!-margin-bottom-0">No filters selected.</p>
+        </div>
+        <form action="#" method="get" class="moj-filter__options">
+          <div class="govuk-form-group">
+            <h3 class="govuk-heading-s">Find a complaint</h3>
+            <p class="govuk-body">You can filter by complaint reference number.</p>
+            <label class="govuk-label govuk-visually-hidden" for="filter-complaint-ref">Complaint reference number</label>
+            <input class="govuk-input" id="filter-complaint-ref" name="filter-complaint-ref" type="text" spellcheck="false">
+          </div>
+          <p class="govuk-body">
+            <a class="govuk-link govuk-link--no-visited-state" href="#">Show all sections <span aria-hidden="true">▼</span></a>
+          </p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Status</legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-submitted" name="filter-status" type="checkbox" value="submitted">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-submitted">Submitted</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-under-consideration" name="filter-status" type="checkbox" value="under-consideration">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-under-consideration">Under consideration</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-out-of-scope" name="filter-status" type="checkbox" value="out-of-scope">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-out-of-scope">Out of scope</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-assigned" name="filter-status" type="checkbox" value="assigned">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-assigned">Assigned to complaint handler</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-ofsted" name="filter-status" type="checkbox" value="ofsted">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-ofsted">Passed to Ofsted</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-tra" name="filter-status" type="checkbox" value="tra">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-tra">Passed to Teaching Regulation Authority</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-resolved" name="filter-status" type="checkbox" value="resolved">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-resolved">Resolved</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Assigned to</legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="assigned-unassigned" name="filter-assigned" type="checkbox" value="unassigned">
+                  <label class="govuk-label govuk-checkboxes__label" for="assigned-unassigned">Unassigned</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="assigned-larry" name="filter-assigned" type="checkbox" value="larry-curtains">
+                  <label class="govuk-label govuk-checkboxes__label" for="assigned-larry">Larry Curtains</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="assigned-sanjeev" name="filter-assigned" type="checkbox" value="sanjeev-grout">
+                  <label class="govuk-label govuk-checkboxes__label" for="assigned-sanjeev">Sanjeev Grout</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Complainant</legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="complainant-not-disclosed" name="filter-complainant" type="checkbox" value="not-disclosed">
+                  <label class="govuk-label govuk-checkboxes__label" for="complainant-not-disclosed">Not disclosed</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="complainant-sharon" name="filter-complainant" type="checkbox" value="sharon-peas">
+                  <label class="govuk-label govuk-checkboxes__label" for="complainant-sharon">Sharon Peas</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="complainant-kulwinder" name="filter-complainant" type="checkbox" value="kulwinder-icepack">
+                  <label class="govuk-label govuk-checkboxes__label" for="complainant-kulwinder">Kulwinder Icepack</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h2 class="govuk-heading-l">5 complaints found</h2>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">
+      <a class="govuk-link" href="school-complaint-page.html">Complaint 123456789</a>
+    </h2>
+    <p class="govuk-body"><strong>Date submitted:</strong> 37 July 2033</p>
+    <p class="govuk-body"><strong>Assigned to:</strong> Cuthbert Dibble</p>
+    <p class="govuk-body"><strong>Complainant:</strong> Blerky Johnson</p>
+    <p class="govuk-body"><strong>Status:</strong> <span class="govuk-tag govuk-tag--blue" style="max-width: 300px;">Submitted to school</span></p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">
+      <a class="govuk-link" href="#">Complaint 1234567891</a>
+    </h2>
+    <p class="govuk-body"><strong>Date submitted:</strong> 15 June 2033</p>
+    <p class="govuk-body"><strong>Assigned to:</strong> Unassigned</p>
+    <p class="govuk-body"><strong>Complainant:</strong> Blerky Johnson</p>
+    <p class="govuk-body"><strong>Status:</strong> <span class="govuk-tag govuk-tag--grey" style="max-width: 300px;">Out of scope</span></p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">
+      <a class="govuk-link" href="#">Complaint 123456788</a>
+    </h2>
+    <p class="govuk-body"><strong>Date submitted:</strong> 37 July 2033</p>
+    <p class="govuk-body"><strong>Assigned to:</strong> Unassigned</p>
+    <p class="govuk-body"><strong>Complainant:</strong> Alex River</p>
+    <p class="govuk-body"><strong>Status:</strong> <span class="govuk-tag govuk-tag--blue" style="max-width: 300px;">Submitted to school</span></p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">
+      <a class="govuk-link" href="#">Complaint 1234567891</a>
+    </h2>
+    <p class="govuk-body"><strong>Date submitted:</strong> 15 June 2033</p>
+    <p class="govuk-body"><strong>Assigned to:</strong> Unassigned</p>
+    <p class="govuk-body"><strong>Complainant:</strong> Alex River</p>
+    <p class="govuk-body"><strong>Status:</strong> <span class="govuk-tag govuk-tag--grey" style="max-width: 300px;">Resolved</span></p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">
+      <a class="govuk-link" href="#">Complaint 1234567891</a>
+    </h2>
+    <p class="govuk-body"><strong>Date submitted:</strong> 15 June 2033</p>
+    <p class="govuk-body"><strong>Assigned to:</strong> Unassigned</p>
+    <p class="govuk-body"><strong>Complainant:</strong> Blerky Johnson</p>
+    <p class="govuk-body"><strong>Status:</strong> <span class="govuk-tag govuk-tag--grey" style="max-width: 300px;">Out of scope</span></p>
+
+  </div>
+</div>
+
+{% endblock %}
