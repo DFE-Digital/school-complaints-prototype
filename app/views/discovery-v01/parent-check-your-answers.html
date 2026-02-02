@@ -7,7 +7,115 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Check your answers</h1>
-    <p class="govuk-body">Content will go here.</p>
+
+    {{ govukSummaryList({
+      classes: "govuk-!-margin-bottom-9",
+      rows: [
+        {
+          key: {
+            text: "Which school is your complaint about?"
+          },
+          value: {
+            text: "Bradford Academy"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "which school is your complaint about?"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Name of your affected child/children?"
+          },
+          value: {
+            text: "Alex Johnson"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "name of your affected child/children?"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "What is your complaint about?"
+          },
+          value: {
+            text: "My child is not being treated fairly at school"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "what is your complaint about?"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Have you previously discussed this issue or concern with the school?"
+          },
+          value: {
+            html: "Yes"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "have you previously discussed this issue or concern with the school?"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Describe your complaint"
+          },
+          value: {
+            html: 'My child is not being treated fairly at school as they are not being given the same opportunities as other children. I have spoken to the school about this and they have not taken any action to address the issue.'
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "describe your complaint"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Attached evidence"
+          },
+          value: {
+            html: '<a class="govuk-link" href="#">diagnois.docx</a><br><a class="govuk-link" href="#">evidence.pdf</a><br><a class="govuk-link" href="#">evidence-vide.mp4</a>'
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "attached evidence"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
     <a href="parent-confirmation.html" class="govuk-button" data-module="govuk-button">Submit complaint</a>
   </div>
 </div>
