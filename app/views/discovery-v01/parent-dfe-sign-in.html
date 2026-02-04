@@ -1,0 +1,29 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Parent DfE Sign-in" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Access the DfE Sign-in service</h1>
+
+    <p class="govuk-body">Log into your account</p>
+    <p class="govuk-hint">Enter your email address to sign in.</p>
+    <div class="govuk-form-group">
+      <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" autocomplete="email">
+    </div>
+    <a href="parent-dashboard-user-1.html" class="govuk-button" data-module="govuk-button">Next</a>
+
+    <p class="govuk-body">By signing in, you accept <a class="govuk-link" href="#">DfE Sign-in terms and conditions.</a></p>
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-6">New users of DfE Sign-in</h2>
+    <button type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">Create an account</button>
+
+    <p class="govuk-body govuk-!-margin-top-6">
+      <a class="govuk-link" href="#"><span aria-hidden="true">▶</span> Services using DfE Sign-in</a>
+    </p>
+  </div>
+</div>
+
+{% endblock %}
