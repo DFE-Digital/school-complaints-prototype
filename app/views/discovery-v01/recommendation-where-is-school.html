@@ -1,0 +1,42 @@
+{% extends "layouts/unbranded.html" %}
+
+{% set pageName="Parent home" %}
+{% set bodyClasses="unbranded-body" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="recommendation-where-is-school" method="get">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">Where is the school?</h1>
+          </legend>
+          <p id="where-hint" class="govuk-hint">Each nation in the UK has its own school complaints process.</p>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="nation-england" name="nation" type="radio" value="england" aria-describedby="where-hint">
+              <label class="govuk-label govuk-radios__label" for="nation-england">England</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="nation-scotland" name="nation" type="radio" value="scotland" aria-describedby="where-hint">
+              <label class="govuk-label govuk-radios__label" for="nation-scotland">Scotland</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="nation-wales" name="nation" type="radio" value="wales" aria-describedby="where-hint">
+              <label class="govuk-label govuk-radios__label" for="nation-wales">Wales</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="nation-northern-ireland" name="nation" type="radio" value="northern-ireland" aria-describedby="where-hint">
+              <label class="govuk-label govuk-radios__label" for="nation-northern-ireland">Northern Ireland</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button unbranded-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

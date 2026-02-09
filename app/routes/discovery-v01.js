@@ -7,10 +7,11 @@ module.exports = function (router) {
 
     versionMiddleware(router, version);
 
-    router.get('/' + version + '/s-p', function (req, res) {
-        var school = req.session.data['school-list'].find(x => x.schoolID == req.query.id)
-        req.session.data.currentSchool = school;
-        res.redirect('school-portal-single');
+    router.get('/' + version + '/recommendation-where-is-school', function (req, res, next) {
+        if (req.query.nation === 'scotland') {
+            return res.redirect('/' + version + '/recommendation-where-is-school-scotland');
+        }
+        next();
     })
 
 }

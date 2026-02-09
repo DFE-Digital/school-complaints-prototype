@@ -1,0 +1,32 @@
+{% extends "layouts/unbranded.html" %}
+
+{% set pageName="Parent home" %}
+{% set bodyClasses="unbranded-body" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Understand how to make a complaint about a school</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <p class="govuk-body">This tool supports those who have a complaint about a school, and want to know what to do next.</p>
+    <p class="govuk-body">Most issues can be resolved quickly when you know who to speak to, and what to expect.</p>
+    <p class="govuk-body">Different organisations in the education system have different areas of responsibility, and may be able to help with your complaint.</p>
+
+    <h2 class="govuk-heading-l">Speak to the school first</h2>
+    <p class="govuk-body">Parents and schools share the same goal: supporting children's education, but sometimes questions or concerns arise.</p>
+    <p class="govuk-body">Often issues are best resolved by a child's teacher, or school leadership. If needed, each school should have a complaint procedure you can follow.</p>
+    <p class="govuk-body">In most cases, you should try to resolve your complaint with the school before any other organisation can get involved.</p>
+
+    <a href="recommendation-where-is-school.html"  role="button" draggable="false" class="govuk-button govuk-button--start unbranded-button" data-module="govuk-button">Start now</a>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <img src="/public/images/Primary-Assessemnt-Guide6.png" alt="Illustration about making a complaint about a school" class="govuk-image">
+  </div>
+
+</div>
+
+{% endblock %}
