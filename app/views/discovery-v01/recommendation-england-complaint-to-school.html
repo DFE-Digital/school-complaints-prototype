@@ -1,0 +1,33 @@
+{% extends "layouts/unbranded.html" %}
+
+{% set pageName="Have you made a complaint to the school?" %}
+{% set bodyClasses="unbranded-body" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="recommendation-england-complaint-to-school" method="get">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">Have you made a complaint to the school?</h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-to-school-yes" name="complaint-to-school" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="complaint-to-school-yes">Yes</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-to-school-no" name="complaint-to-school" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="complaint-to-school-no">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button unbranded-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

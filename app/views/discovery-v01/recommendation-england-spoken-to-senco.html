@@ -1,0 +1,37 @@
+{% extends "layouts/unbranded.html" %}
+
+{% set pageName="Have you spoken to the school's special educational needs co-ordinator (SENCO)?" %}
+{% set bodyClasses="unbranded-body" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="recommendation-england-spoken-to-senco" method="get">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">Have you spoken to the school's special educational needs co-ordinator (SENCO)?</h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="spoken-to-senco-yes" name="spoken-to-senco" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="spoken-to-senco-yes">Yes</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="spoken-to-senco-no" name="spoken-to-senco" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="spoken-to-senco-no">No</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="spoken-to-senco-no-senco" name="spoken-to-senco" type="radio" value="no-senco">
+              <label class="govuk-label govuk-radios__label" for="spoken-to-senco-no-senco">The school does not have a SENCO</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button unbranded-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layouts/unbranded.html" %}
+
+{% set pageName="Parent home" %}
+{% set bodyClasses="unbranded-body" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="recommendation-where-is-school-england" method="get">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">Is your complaint about a state school or private school?</h1>
+          </legend>
+          <p id="school-type-hint" class="govuk-hint">State schools are government funded and free. Private schools charge tuition fees. You can <a href="https://www.gov.uk/types-of-school" class="govuk-link" target="_blank">find out about the types of school</a> on GOV.UK.</p>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="school-type-state" name="school-type" type="radio" value="state" aria-describedby="school-type-hint">
+              <label class="govuk-label govuk-radios__label" for="school-type-state">State school</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="school-type-private" name="school-type" type="radio" value="private" aria-describedby="school-type-hint">
+              <label class="govuk-label govuk-radios__label" for="school-type-private">Private school</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button unbranded-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

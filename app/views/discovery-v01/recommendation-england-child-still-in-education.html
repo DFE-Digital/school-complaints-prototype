@@ -1,0 +1,33 @@
+{% extends "layouts/unbranded.html" %}
+
+{% set pageName="Is the child still in education?" %}
+{% set bodyClasses="unbranded-body" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="recommendation-england-child-still-in-education" method="get">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">Is the child still in education?</h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="child-still-in-education-yes" name="child-still-in-education" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="child-still-in-education-yes">Yes</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="child-still-in-education-no" name="child-still-in-education" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="child-still-in-education-no">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button unbranded-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

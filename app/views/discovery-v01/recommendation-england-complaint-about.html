@@ -1,0 +1,84 @@
+{% extends "layouts/unbranded.html" %}
+
+{% set pageName="What is your complaint about?" %}
+{% set bodyClasses="unbranded-body" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="recommendation-england-complaint-about" method="get">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">What is your complaint about?</h1>
+          </legend>
+          <p id="complaint-about-hint" class="govuk-hint">The topic of your complaint will determine which organisation is able to consider it.</p>
+          <div class="govuk-radios" data-module="govuk-radios" aria-describedby="complaint-about-hint">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-child-protection" name="complaint-about" type="radio" value="child-protection">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-child-protection">Child protection</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-criminal" name="complaint-about" type="radio" value="criminal-behaviour">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-criminal">Criminal behaviour</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-data" name="complaint-about" type="radio" value="data-protection">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-data">Data protection</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-discrimination" name="complaint-about" type="radio" value="discrimination">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-discrimination">Discrimination</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-employment" name="complaint-about" type="radio" value="employment">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-employment">Employment</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-exam-sats" name="complaint-about" type="radio" value="exam-malpractice-sats">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-exam-sats">Exam malpractice or maladministration (SATs)</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-exam-secondary" name="complaint-about" type="radio" value="exam-malpractice-secondary">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-exam-secondary">Exam malpractice or maladministration (secondary school)</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-teacher-misconduct" name="complaint-about" type="radio" value="serious-teacher-misconduct">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-teacher-misconduct">Serious teacher misconduct</label>
+              <span class="govuk-hint govuk-radios__hint">Any behaviour that could result in a teacher not being allowed to teach again, such as sexual misconduct or violent behaviour</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-systemic" name="complaint-about" type="radio" value="systemic-issues">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-systemic">Systemic issues at the school</label>
+              <span class="govuk-hint govuk-radios__hint">Issues affecting more than just 1 child. This could include poor education quality, neglected pupil wellbeing or development, inadequate SEN provision, or poor leadership and management.</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-no-education" name="complaint-about" type="radio" value="child-not-getting-education">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-no-education">Child is not getting an education</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-harm" name="complaint-about" type="radio" value="child-exposed-to-harm">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-harm">Child has been exposed to harm</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-procedure" name="complaint-about" type="radio" value="school-stopping-complaints-procedure">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-procedure">School is stopping you from following its complaints procedure</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-sen" name="complaint-about" type="radio" value="sen-provision">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-sen">Special Educational Needs (SEN) provision</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-about-disability" name="complaint-about" type="radio" value="disability-discrimination">
+              <label class="govuk-label govuk-radios__label" for="complaint-about-disability">Disability discrimination</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button unbranded-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
