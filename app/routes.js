@@ -12,3 +12,4 @@ const router = govukPrototypeKit.requests.setupRouter()
 //* route files for different sprints
 //********************************************
 require('./routes/discovery-v01.js')(router);
+require('./routes/alpha-v01.js')(router);

@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="What is your complaint about?" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">What is your complaint about?</h1>
+          </legend>
+          <div id="complaint-type-hint" class="govuk-hint">Different types of complaint are handled by different bodies</div>
+          <div class="govuk-radios" data-module="govuk-radios" aria-describedby="complaint-type-hint">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-type-harm" name="complaint-type" type="radio" value="harm" aria-describedby="complaint-type-harm-hint">
+              <label class="govuk-label govuk-radios__label" for="complaint-type-harm">A child has been harmed or is at risk of harm</label>
+              <div id="complaint-type-harm-hint" class="govuk-hint govuk-radios__hint">This includes neglect, abuse or exploitation</div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-type-staff" name="complaint-type" type="radio" value="staff-behaviour">
+              <label class="govuk-label govuk-radios__label" for="complaint-type-staff">A member of staff behaved inappropriately</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-type-education" name="complaint-type" type="radio" value="suitable-education">
+              <label class="govuk-label govuk-radios__label" for="complaint-type-education">My child is not getting a suitable education</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-type-standards" name="complaint-type" type="radio" value="poor-standards" aria-describedby="complaint-type-standards-hint">
+              <label class="govuk-label govuk-radios__label" for="complaint-type-standards">Poor standards are affecting many children</label>
+              <div id="complaint-type-standards-hint" class="govuk-hint govuk-radios__hint">This includes poor education quality, pupil wellbeing or development</div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-type-sen" name="complaint-type" type="radio" value="sen-support">
+              <label class="govuk-label govuk-radios__label" for="complaint-type-sen">My child is not getting the correct SEN support</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-type-exams" name="complaint-type" type="radio" value="exams">
+              <label class="govuk-label govuk-radios__label" for="complaint-type-exams">Irregularities related to exams</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="complaint-type-something-else" name="complaint-type" type="radio" value="something-else">
+              <label class="govuk-label govuk-radios__label" for="complaint-type-something-else">Something else</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

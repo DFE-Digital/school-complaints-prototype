@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Where is the school?" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form method="get" action="/alpha-v01/where-is-the-school">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">Where is the school?</h1>
+          </legend>
+          <div id="where-hint" class="govuk-hint">Each nation in the UK has its own school complaints process.</div>
+          <div class="govuk-radios" data-module="govuk-radios" aria-describedby="where-hint">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="nation-england" name="nation" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="nation-england">England</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="nation-scotland" name="nation" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="nation-scotland">Scotland</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="nation-wales" name="nation" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="nation-wales">Wales</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="nation-northern-ireland" name="nation" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="nation-northern-ireland">Northern Ireland</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
