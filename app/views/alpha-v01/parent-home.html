@@ -5,8 +5,9 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Complain about a school in England</h1>
+  <div class="govuk-grid-column-full">
+    {% set heading = "Complain about a school in England" %}
+    {% include "includes/gem-page-heading.html" %}
 
     <p class="govuk-body">Use this form to submit a formal complaint about your child’s school.</p>
     <p class="govuk-body">Each school should have a complaint procedure you can follow which is available on their website, or on request. This will include details specific to each school.</p>

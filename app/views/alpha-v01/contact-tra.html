@@ -1,0 +1,35 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Contact the Teaching Regulation Authority" %}
+
+{% block beforeContent %}
+  <a href="/alpha-v01/type-of-complaint" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% set heading = "Contact the Teaching Regulation Authority" %}
+    {% include "includes/gem-page-heading.html" %}
+
+    <p class="govuk-body">You should <a class="govuk-link" href="https://www.gov.uk/report-teacher-misconduct">contact the Teaching Regulation Authority</a>.</p>
+
+    <h2 class="govuk-heading-l">What counts as serious teacher misconduct</h2>
+    <p class="govuk-body">You should only contact the Teaching Regulation Authority to report serious teacher misconduct.</p>
+    <p class="govuk-body">Serious misconduct is any behaviour that could result in a teacher not being allowed to teach again.</p>
+    <p class="govuk-body">This includes:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>sexual misconduct, including assault, abuse or harassment</li>
+      <li>violent behaviour</li>
+      <li>serious failure to protect the safety and wellbeing of pupils</li>
+      <li>alcohol or drug misuse</li>
+      <li>fraud or serious dishonesty</li>
+      <li>discrimination or harassment</li>
+      <li>promoting extreme political or religious views</li>
+    </ul>
+    <p class="govuk-body">You can also report a teacher who has resigned or been dismissed.</p>
+  </div>
+</div>
+
+{% endblock %}

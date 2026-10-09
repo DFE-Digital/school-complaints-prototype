@@ -2,11 +2,16 @@
 
 {% set pageName="Contact Citizen's Advice about education in Scotland" %}
 
+{% block beforeContent %}
+  <a href="/alpha-v01/where-is-the-school" class="govuk-back-link">Back</a>
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Contact Citizen's Advice about education in Scotland</h1>
+  <div class="govuk-grid-column-full">
+    {% set heading = "Contact Citizen's Advice about education in Scotland" %}
+    {% include "includes/gem-page-heading.html" %}
 
     <p class="govuk-body">They will be able to help guide you through your options and how to complain about a school in Scotland.</p>
   </div>

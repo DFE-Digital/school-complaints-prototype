@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Please tell us more about your complaint" %}
+
+{% set errorField = "harm-detail" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/error-summary.html" %}
+    <form method="get" action="/alpha-v01/child-harm">
+      <input type="hidden" name="submitted" value="true">
+      <div class="govuk-form-group{% if error %} govuk-form-group--error{% endif %}">
+        <fieldset class="govuk-fieldset" id="harm-detail"{% if error %} aria-describedby="harm-detail-error"{% endif %}>
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <div class="gem-c-heading govuk-!-margin-bottom-6">
+            <h1 class="gem-c-heading__text govuk-heading-xl govuk-fieldset__heading">Please tell us more about your complaint</h1>
+            </div>
+          </legend>
+          {% include "includes/error-message.html" %}
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="harm-detail-protection" name="harm-detail" type="radio" value="child-protection-at-school">
+              <label class="govuk-label govuk-radios__label" for="harm-detail-protection">I have concerns about a child’s protection at school</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="harm-detail-exposed" name="harm-detail" type="radio" value="exposed-to-harm">
+              <label class="govuk-label govuk-radios__label" for="harm-detail-exposed">A child has been exposed to harm</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

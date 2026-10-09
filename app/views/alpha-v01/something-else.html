@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Make a complaint about a school" %}
+
+{% set errorField = "other-complaint" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/error-summary.html" %}
+    {% set heading = "What is your complaint about?" %}
+    {% include "includes/gem-page-heading.html" %}
+
+    <form method="get" action="/alpha-v01/something-else">
+      <input type="hidden" name="submitted" value="true">
+      <div class="govuk-form-group{% if error %} govuk-form-group--error{% endif %}">
+        <fieldset class="govuk-fieldset" id="other-complaint"{% if error %} aria-describedby="other-complaint-error"{% endif %}>
+          {% include "includes/error-message.html" %}
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="other-complaint-discrimination" name="other-complaint" type="radio" value="discrimination">
+              <label class="govuk-label govuk-radios__label" for="other-complaint-discrimination">Discrimination</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="other-complaint-data" name="other-complaint" type="radio" value="data-protection">
+              <label class="govuk-label govuk-radios__label" for="other-complaint-data">Data protection</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="other-complaint-process" name="other-complaint" type="radio" value="complaints-process">
+              <label class="govuk-label govuk-radios__label" for="other-complaint-process">The school has not followed the complaints process or refuses to deal with my complaint</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

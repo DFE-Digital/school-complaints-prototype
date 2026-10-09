@@ -2,18 +2,25 @@
 
 {% set pageName="What is your complaint about?" %}
 
+{% set errorField = "complaint-type" %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <form method="post">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
+    {% include "includes/error-summary.html" %}
+    <form method="get" action="/alpha-v01/type-of-complaint">
+      <input type="hidden" name="submitted" value="true">
+      <div class="govuk-form-group{% if error %} govuk-form-group--error{% endif %}">
+        <fieldset class="govuk-fieldset" id="complaint-type" aria-describedby="{% if error %}complaint-type-error {% endif %}complaint-type-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <h1 class="govuk-fieldset__heading">What is your complaint about?</h1>
+            <div class="gem-c-heading govuk-!-margin-bottom-6">
+            <h1 class="gem-c-heading__text govuk-heading-xl govuk-fieldset__heading">What is your complaint about?</h1>
+            </div>
           </legend>
           <div id="complaint-type-hint" class="govuk-hint">Different types of complaint are handled by different bodies</div>
-          <div class="govuk-radios" data-module="govuk-radios" aria-describedby="complaint-type-hint">
+          {% include "includes/error-message.html" %}
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="complaint-type-harm" name="complaint-type" type="radio" value="harm" aria-describedby="complaint-type-harm-hint">
               <label class="govuk-label govuk-radios__label" for="complaint-type-harm">A child has been harmed or is at risk of harm</label>

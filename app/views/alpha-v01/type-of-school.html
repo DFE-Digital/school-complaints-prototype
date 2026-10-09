@@ -2,20 +2,27 @@
 
 {% set pageName="Is your complaint about a state school or private school?" %}
 
+{% set errorField = "school-type" %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    {% include "includes/error-summary.html" %}
     <form method="get" action="/alpha-v01/type-of-school">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
+      <input type="hidden" name="submitted" value="true">
+      <div class="govuk-form-group{% if error %} govuk-form-group--error{% endif %}">
+        <fieldset class="govuk-fieldset" id="school-type" aria-describedby="{% if error %}school-type-error {% endif %}school-type-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <h1 class="govuk-fieldset__heading">Is your complaint about a state school or private school?</h1>
+            <div class="gem-c-heading govuk-!-margin-bottom-6">
+            <h1 class="gem-c-heading__text govuk-heading-xl govuk-fieldset__heading">Is your complaint about a state school or private school?</h1>
+            </div>
           </legend>
           <div id="school-type-hint" class="govuk-hint">
             State schools are government funded and free. Private schools charge tuition fees. You can <a class="govuk-link" href="https://www.gov.uk/types-of-school">find out about the types of school</a> on GOV.UK.
           </div>
-          <div class="govuk-radios" data-module="govuk-radios" aria-describedby="school-type-hint">
+          {% include "includes/error-message.html" %}
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="school-type-state" name="school-type" type="radio" value="state">
               <label class="govuk-label govuk-radios__label" for="school-type-state">State school</label>

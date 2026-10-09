@@ -2,11 +2,15 @@
 
 {% set pageName="Make a complaint about a school" %}
 
+{% set errorField = "school-procedure" %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Make a complaint about a school</h1>
+    {% include "includes/error-summary.html" %}
+    {% set heading = "Make a complaint about a school" %}
+    {% include "includes/gem-page-heading.html" %}
 
     <p class="govuk-body">We’ll help you reach the correct people to deal with your problem.</p>
 
@@ -15,11 +19,13 @@
     <p class="govuk-body">In most cases you must follow the school’s complaints procedure before another body can look into a complaint about them.</p>
 
     <form method="get" action="/alpha-v01/intro">
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
+    <input type="hidden" name="submitted" value="true">
+    <div class="govuk-form-group{% if error %} govuk-form-group--error{% endif %}">
+      <fieldset class="govuk-fieldset" id="school-procedure"{% if error %} aria-describedby="school-procedure-error"{% endif %}>
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
           Please say if you have done this:
         </legend>
+        {% include "includes/error-message.html" %}
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="followed-procedure" name="school-procedure" type="radio" value="followed">
@@ -42,7 +48,7 @@
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
       <strong class="govuk-warning-text__text">
         <span class="govuk-visually-hidden">Warning</span>
-        Call 999 if a child is in danger
+        Call 999 if a child is in immediate danger. Contact your council or call the police on 101 if you think a child is at risk.
       </strong>
     </div>
 
@@ -56,12 +62,14 @@
   </div>
 
   <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-s">Related content</h2>
-    <ul class="govuk-list">
-      <li>
-        <a class="govuk-link" href="#">How to raise a concern with a school</a>
-      </li>
-    </ul>
+    <aside class="app-related-content" aria-label="Related content">
+      <h2 class="govuk-heading-s">Related content</h2>
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="/alpha-v01/raise-a-concern">How to raise a concern with a school</a>
+        </li>
+      </ul>
+    </aside>
   </div>
 </div>
 

@@ -1,0 +1,20 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Contact the Information Commissioner’s Office" %}
+
+{% block beforeContent %}
+  <a href="/alpha-v01/something-else" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% set heading = "Contact the Information Commissioner’s Office" %}
+    {% include "includes/gem-page-heading.html" %}
+
+    <p class="govuk-body">You should contact the ICO about this.</p>
+  </div>
+</div>
+
+{% endblock %}

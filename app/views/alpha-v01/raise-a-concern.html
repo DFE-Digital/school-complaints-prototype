@@ -1,0 +1,44 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Raise your concern with the school" %}
+
+{% block beforeContent %}
+  <a href="/alpha-v01/{{ data['raise-a-concern-from'] or 'intro' }}" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% set heading = "Raise your concern with the school" %}
+    {% include "includes/gem-page-heading.html" %}
+
+    <p class="govuk-body">Contact the school to discuss the problem first - most problems can be solved this way.</p>
+
+    <h2 class="govuk-heading-m">You should talk to your child’s teacher about:</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>incidents in class</li>
+      <li>homework</li>
+      <li>pupil friendships and behaviour</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">You should talk to a head of department about:</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>issues the teacher cannot resolve</li>
+      <li>bullying</li>
+      <li>repeated behaviour issues</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">You should talk to the school headteacher or principal about:</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>issues the head of department cannot resolve</li>
+      <li>school-wide problems</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Make a formal complaint</h2>
+    <p class="govuk-body">If the school’s headteacher cannot resolve the problem, you should follow the school’s complaints procedure. Every school in England must have one and you can usually find a copy on their website.</p>
+    <p class="govuk-body">The school will let you know the outcome after they have reviewed your complaint.</p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Have you spoken to the school’s special educational needs co-ordinator (SENCO)?" %}
+
+{% set errorField = "spoken-to-senco" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/error-summary.html" %}
+    <form method="get" action="/alpha-v01/spoken-to-senco">
+      <input type="hidden" name="submitted" value="true">
+      <div class="govuk-form-group{% if error %} govuk-form-group--error{% endif %}">
+        <fieldset class="govuk-fieldset" id="spoken-to-senco"{% if error %} aria-describedby="spoken-to-senco-error"{% endif %}>
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <div class="gem-c-heading govuk-!-margin-bottom-6">
+            <h1 class="gem-c-heading__text govuk-heading-xl govuk-fieldset__heading">Have you spoken to the school’s special educational needs co-ordinator (SENCO)?</h1>
+            </div>
+          </legend>
+          {% include "includes/error-message.html" %}
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="spoken-to-senco-yes" name="spoken-to-senco" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="spoken-to-senco-yes">Yes</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="spoken-to-senco-no" name="spoken-to-senco" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="spoken-to-senco-no">No</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="spoken-to-senco-no-senco" name="spoken-to-senco" type="radio" value="no-senco">
+              <label class="govuk-label govuk-radios__label" for="spoken-to-senco-no-senco">The school does not have a SENCO</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

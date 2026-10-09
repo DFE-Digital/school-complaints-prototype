@@ -1,0 +1,25 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Contact your local council" %}
+
+{% block beforeContent %}
+  <a href="/alpha-v01/child-harm" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% set heading = "Contact your local council" %}
+    {% include "includes/gem-page-heading.html" %}
+
+    <p class="govuk-body">Speak to the local council if you have concerns about child protection at the school.</p>
+    <p class="govuk-body">You can <a class="govuk-link" href="https://www.gov.uk/find-local-council">find your local council</a> on GOV.UK if you are unsure about who that is.</p>
+
+    <h2 class="govuk-heading-l">Who to contact if a child is in danger</h2>
+    <p class="govuk-body">Contact your local council if you think a child is at risk.</p>
+    <p class="govuk-body">Call 999 if a child is in immediate danger.</p>
+  </div>
+</div>
+
+{% endblock %}

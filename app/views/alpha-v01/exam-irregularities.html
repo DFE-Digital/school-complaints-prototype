@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Tell us more about your complaint" %}
+
+{% set errorField = "exam-irregularity" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "includes/error-summary.html" %}
+    <form method="get" action="/alpha-v01/exam-irregularities">
+      <input type="hidden" name="submitted" value="true">
+      <div class="govuk-form-group{% if error %} govuk-form-group--error{% endif %}">
+        <fieldset class="govuk-fieldset" id="exam-irregularity"{% if error %} aria-describedby="exam-irregularity-error"{% endif %}>
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <div class="gem-c-heading govuk-!-margin-bottom-6">
+            <h1 class="gem-c-heading__text govuk-heading-xl govuk-fieldset__heading">Tell us more about your complaint</h1>
+            </div>
+          </legend>
+          {% include "includes/error-message.html" %}
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="exam-irregularity-sats" name="exam-irregularity" type="radio" value="sats">
+              <label class="govuk-label govuk-radios__label" for="exam-irregularity-sats">My complaint is about irregularities related to SATs</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="exam-irregularity-secondary" name="exam-irregularity" type="radio" value="secondary">
+              <label class="govuk-label govuk-radios__label" for="exam-irregularity-secondary">My complaint is about irregularities related to exams in a secondary school</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

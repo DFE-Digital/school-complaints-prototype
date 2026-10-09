@@ -4,6 +4,14 @@
 // 
 
 // Add extra styles here
+
+// GOV.UK Publishing Components heading (as on gov.uk/complain-about-school)
+.gem-c-heading .gem-c-heading__text {
+  margin: 0;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
 .prototype-index-card {
   background-color: #d9f0ff; 
   padding: 20px 30px 10px 30px; 
